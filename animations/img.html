@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+            margin-top: 200px;
+           
+        }
+        img{
+            width: 200px;
+            padding: 20px;
+            border-radius: 30%;
+           
+           
+        }
+        /* img:hover{
+            transform: scale(1.2);
+            transform: rotate(360deg);
+            transform: skew(40deg);
+            transform: translate(100px,100px);
+        } */
+        #scale:hover ~ #img{
+            transform: scale(1.2);
+            transition: all 2s;
+        }
+        #img{
+            transition: transform 0.5s ease;
+        }
+        #scale{
+            cursor: pointer;
+            border-radius: 20%;
+            background-color: darkmagenta;
+        }
+        #rotate:hover ~ #img{
+            transform: rotate(360deg);
+            transition: all 2s;
+        } 
+        #rotate{
+            cursor: pointer;
+            border-radius: 20%;
+            background-color: darkmagenta;
+        }
+        #skew:hover  ~ #img{
+            transform: skew(60deg);
+            transition: all 2s;
+        }
+        #skew{
+            cursor: pointer;
+            border-radius: 20%;
+            background-color: darkmagenta;
+        }
+        #translate:hover ~ #img{
+            transform: translate(200px,200px);
+            transition: all 2s; 
+        }
+        #translate{
+            cursor: pointer;
+            border-radius: 20%;
+            background-color: darkmagenta;
+        }
+        </style>
+        </head>
+<body>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <div class="container">
+       <center> <button id="scale">scale</button>
+        <button id="rotate">rotate</button>
+        <button id="skew">skew</button>
+        <button id="translate">translate</button>
+        <img id="img" src="https://static.vecteezy.com/system/resources/thumbnails/023/122/855/small_2x/colorful-bird-on-a-background-of-nature-ai-generated-free-photo.jpg"></center>
+    </div>
+</body>
+</html>

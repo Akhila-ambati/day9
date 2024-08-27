@@ -1,0 +1,139 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <style>  
+        body {  
+            display: flex;  
+            
+            justify-content: center;  
+            column-gap: 15px;
+            height:300vh;
+            /* margin-bottom: 200px; */
+           
+            }  
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-color: yellow;
+
+            }
+            .shape:nth-child(1){
+                background-color: red;
+                animation-delay: 0.1s;
+            }
+            .shape:nth-child(2){
+                background-color: blue;
+                animation-delay: -1s;
+            }
+            .shape:nth-child(2){
+        
+                animation-delay: -1.5s;
+            }
+    
+           .shape {  
+            width: 50px;  
+            height: 50px;  
+            background-color: purple;  
+            border-radius: 50%; 
+            margin-top: 200px;
+            box-shadow: 0 5px 10px black; 
+            animation: animate 1s ease-in-out infinite alternate;
+
+            
+            /* animation: bouncingBallAnimation 0.5s;   */
+            /* animation-direction: normal;   */
+             /* animation-timing-function: cubic-bezier(.4, 0.06, 1, .6); */
+            /* animation-iteration-count: ;  */
+            } 
+            .loader{
+                display: flex;
+                margin-top: 350px;
+                column-gap: 15px;
+                /* overflow: hidden; */
+                position: fixed;
+                animation: preloader;
+                /* animation: preloader 1s ease-in-out infinite alternate; */
+               
+            }
+            
+            .dot {  
+                /* display: flex; */
+            width: 20px;  
+            height:20px;  
+            background-color: black;  
+            border-radius: 50%; 
+            animation-iteration-count: infinite;
+            /* box-shadow: 0 5px 10px black;  */
+            /* animation: animate 1s ease-in-out infinite alternate; */
+            /* margin-top: 350px; */
+            /* align-items: center; */
+            /* align-content:center; */
+            /* justify-content: center; */
+            /* z-index: 100000px; */
+            }
+            .dot:nth-child(1){
+                animation: preloader 1s ease-in infinite alternate ;
+                animation-delay:0s ;
+            }
+            
+            .dot:nth-child(2){
+                animation: preloader 1s ease-in-out infinite alternate;
+                animation-delay: 0.9s;
+            }
+            
+            .dot:nth-child(3){
+                animation: preloader 1s ease-out infinite alternate;
+                animation-delay: 1.5s;
+            }
+            @keyframes preloader{
+                0%{
+                    transform: scale(1);
+                    opacity:0.1;
+                    /* box-shadow: 1px 2px 3px -2px black; */
+                }
+                50%{
+                    transform: scale(1.5);
+                    opacity: 0.2;
+                }
+                100%{
+                    transform: scale(1.2);
+                    opacity: 0.1;
+                }
+            }
+           
+          
+        /* we will make diagonal bounce to the ball */  
+       @keyframes animate {
+        0% {
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(50px);
+        }
+        /* 100%{
+            transform: translateY(-50);
+        } */
+        }
+
+          
+    </style>  
+</head>  
+  
+<body>  
+    <!-- this div will be desinged as a ball which will have bounce effect -->  
+    <div class="shape"></div> 
+    <div class="shape"></div> 
+    <div class="shape"></div> 
+
+    <br>
+    <br>
+    <div class="loader">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+    
+    
+</body>  
+</html>
